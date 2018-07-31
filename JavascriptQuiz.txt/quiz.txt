@@ -1,0 +1,16 @@
+/*1)*/
+console.log("Hello World.");
+
+/*2*/
+let fname = Leonardo
+let lname = Galan
+console.log('Hello, my name is '+fname + ''+lname +'' );
+
+/*7*/
+
+for(let i = 1;i <= 20;i = 2 * i +3)
+{
+  console.log(3*i);
+
+}
+console.log('The vaule of i will be 60');
