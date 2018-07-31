@@ -14,8 +14,8 @@ In order to test this function, and print it's output to the console, we would a
 console.log(Basic_Alarm("My alarm!"));
 ```
 If we run our script and see the correct output, then we know our function is working and can move onto the next one! Try this out on the tasks below...
-
-1. Write a function called My_Alarm. The function should take in an input of a string with the time you need to wake up. The output of the function should be "Hey, *NAME*, wake up! It's **\*insert time***". Instead of NAME your function should have your name.
+bro
+1. Write a function called My_Alarm. The function should take in an input of a string with the time you need to wake up. The output of the function should be "Hey, *NAME*, wake up! It's **\*insert time***". Instead of NAME your function shbroould have your name.
 
 2. Write a function called Mom_Alarm. The function should take in an input of a string with the time you need to wake up. The output of the function should be "Hey, Mom, wake up! It's **\*insert time***"
 

@@ -12,4 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-console.log("script is running...");
+
+function Basic_Alarm(alarmMessage){
+  return alarmMessage;
+};
+console.log(Basic_Alarm("My alarm!"));
+
+function My_Alarm(wakeUp){
+  return "Hey, Leo, wake up! It's " + wakeUp;
+
+}
+console.log(My_Alarm("9:00am"));
+
+function Mom_Alarm(wakeMe){
+  return "Hey, Mom, wake up! It's " + wakeMe;
+}
+console.log(Mom_Alarm("9:00am"));
+
+function Family_Alarm(time,name){
+  return "Hey, " + name+ ", wake up! It's " + time;
+
+}
+console.log(Family_Alarm("7:00am", "bro"));
+
+
+function Important_Alarm(message){
+  return message.toUpperCase();
+}
+console.log(Important_Alarm("wake up, wake up, wake up!!"))
