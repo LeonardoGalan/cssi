@@ -15,14 +15,20 @@
 // Task 1
 let dogName1 = "Steve";
 let dogType1 = "beagle";
-
+console.log('I will walk '+dogname1 +' today at 12:00p');
 // Complete Task 1 Below
 
 
 
 let dogName2 = "Joe";
 let dogType2 = "bulldog";
+if dogType2 === "corgi" {
+console.log('I will walk '+ dogName2 +' today at 12:00pm.')
+}
+else {
+console.log('I will walk '+dogName2 +' today at 1:00pm'.)
 
+}
 // Complete Task 2 Below
 
 
