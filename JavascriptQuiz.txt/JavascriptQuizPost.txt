@@ -1,0 +1,35 @@
+1) console.log("I will succeed.")
+
+2) console.log(fname,lname);
+
+3) Let temp =x;
+	x = y;
+	y = temp;
+
+4) For the code to output "I am in", the value of hasAccess has to be false and
+ then hasPass has to be false afterwards.
+
+5) if(x<y)
+{console.log(y);}
+else
+{console.log(x);}
+
+
+6) (10,-10)
+num>=-10 && num<=10
+
+
+8) for(let i =7; i <=77; i = i + 1)
+{console.log(i);}
+
+9) for(let i =10; i <= 90; i =i+1)
+{
+if(i!=22 && i! =56)
+{console.log(i);}
+
+}
+
+10) for(let i=100; i>1;i=i-2)
+{
+	if (i!=99)
+{console.log(i);}
