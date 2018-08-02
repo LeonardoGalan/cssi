@@ -40,3 +40,8 @@ function Important_Alarm(message){
   return message.toUpperCase();
 }
 console.log(Important_Alarm("wake up, wake up, wake up!!"))
+
+function Snooze_Alarm(hour){
+  return "The alarm for " +hour+ " has changed to "+ (hour+1);
+}
+console.log(Snooze_Alarm(9))

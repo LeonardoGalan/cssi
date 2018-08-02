@@ -15,25 +15,35 @@
 // Task 1
 let dogName1 = "Steve";
 let dogType1 = "beagle";
-console.log('I will walk '+dogname1 +' today at 12:00p');
+
 // Complete Task 1 Below
-
-
+let task1 = document.createElement("div");
+let t1Cont = document.createTextNode("I will walk " +dogName1+ " the " +dogType1+ " today at 12:00pm.");
+task1.appendChild(t1Cont);
+ var targetEle =
+ document.getElementById("script");
+ document.body.insertBefore(task1, targetEle);
 
 let dogName2 = "Joe";
 let dogType2 = "bulldog";
-if dogType2 === "corgi" {
-console.log('I will walk '+ dogName2 +' today at 12:00pm.')
-}
-else {
-console.log('I will walk '+dogName2 +' today at 1:00pm'.)
 
-}
 // Complete Task 2 Below
-
-
+if (dogType2.toUpperCase() ==="CORGI") {
+    console.log("I will walk " +dogName2+ " the " +dogType2+ " today at 12:00pm.");
+} else {
+    console.log("I will walk " +dogName2+ " the " +dogType2+ " today at 2:00pm.")
+}
 
 let dogName = "Lola";
 let dogType = "poodle";
 
 // Complete Task 3 Below
+function dogSchedulerBasic(name, breed) {
+  if(breed.toUpperCase() === "CORGI" || "BEAGLE") {
+      console.log("I will walk" +dogName1+ "the" +dogType1+ "today at 12:00pm.");}
+     else if(breed.toUpperCase() === "BULLDOG") {
+          console.log("I will walk" +dogName2+ "today at 1:00pm.");
+      }else{
+          console.log("I will walk" +dogName+ "the" +dogType+ "today at 2:00pm.")
+      }
+}
