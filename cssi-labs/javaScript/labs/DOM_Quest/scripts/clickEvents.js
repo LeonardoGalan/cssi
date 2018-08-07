@@ -17,7 +17,18 @@ console.log("Running Click Events Script");
 document.getElementById('box1').addEventListener('click',()=>{boxcolor(0);});
 document.getElementById('box2').addEventListener('click',()=>{boxcolor(1);});
 document.getElementById('box3').addEventListener('click',()=>{boxcolor(2);});
+// document.getElementById('box4').addEventListener('click',()=>{ document.getElementById('box4').classList.toggle("active");});
+document.getElementById('box5').addEventListener('click',()=>{boxcolor(4);});
 //^ This is saying in the event of clicking box 1, box 2, 3,
+
+let box4 = document.getElementById('box4');
+box4.addEventListener('click',() => { box4.classList.toggle("active");});
+let box5 = document.getElementById('box5');
+box5.addEventListener('click',() => { box5.classList.toggle("active");});
+//box5.addEventListener('click',() => {
+  // box5.classList.toggle("active");
+//   box4.classList.toggle("box");
+//});
 
 
 const colors = ['red','pink','orange'];
@@ -36,3 +47,10 @@ function boxcol(value){
 
 
 }
+//
+// {
+//   box4.classList.toggle("active");
+//   box5.classList.toggle("active");
+//
+//
+// }

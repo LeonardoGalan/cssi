@@ -41,6 +41,11 @@ body {
   grid-row: 1 / 4;
   height: 350px;
   width: 350px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
 
 #red {

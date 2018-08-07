@@ -14,8 +14,31 @@
 
 // Use querySelector to store the div in a variable.
 let redButton = document.querySelector('#red');
+let greenButton = document.querySelector('#green');
+let blueButton = document.querySelector('#blue');
+let responseBox = document.querySelector('#responseBox');
 
 // Use addEventListener to respond to a click event.
-redButton.addEventListener('click', (e) => {
+redButton.addEventListener('click', (e)=> {
   console.log("You clicked the red button!");
+  //console.log(responseBox.style);
+  responseBox.style.backgroundColor='red';
+  responseBox.innerHTML = "<b>Red</b>";
 })
+
+greenButton.addEventListener('click', (e)=> {
+  console.log("You clicked the green button!");
+  responseBox.style.backgroundColor='green';
+  responseBox.innerHTML = "<b>Green</b>";
+})
+
+blueButton.addEventListener('click', (e)=> {
+  console.log("You clicked the blue button!");
+  responseBox.style.backgroundColor='blue'
+  responseBox.innerHTML = "<b>Blue</b>";
+})
+
+// document.getElementById('#red').addEventListener('click',()=>{boxcolor(0);});
+// document.getElementById('#green').addEventListener('click',()=>{boxcolor(1);});
+// document.getElementById('#blue').addEventListener('click',()=>{boxcolor(2);});
+//const colors = ['red','green','blue'];
