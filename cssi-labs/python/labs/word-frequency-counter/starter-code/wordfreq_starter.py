@@ -39,4 +39,54 @@ def get_highest_words(counts_dictionary, count):
 content = read_process_data()
 
 # Write your solution below!
+word_count={}
 
+words = content.split(" ")
+
+for word in words:
+    if word_count.has_key(word):
+        word_count[word] = word_count[word] + 1
+    else:
+        if word != "" and word not in stop_words:
+        word_count[word] = 1
+
+get_highest_words(word_count,10)
+
+class Pet:
+    '''
+    _init__() is a method of the class Pet
+    A method is a function that belongs to a classs instance. All methods of a class first
+    parameter is self '''
+
+    def _init_(self,name,age, animal = "dog"):
+        '''self.name and self.age are instance attributes or data members of the class Pet.
+        Instance attributes are unique in every occurrance (instance) of a Pet object'''
+
+        self.name = name
+        self.age = age
+        self.animal = animal
+        self.is_hunger = False
+        self.mood = "happy"
+def eat(self):
+    self.is_hunger = False 
+''' The pet class has the members age, name, count, __init()__self.
+    To call the __init__() function we use the class name with the
+    respective parameters within paranthesis'''
+
+
+
+def
+#o is an object of Pet
+o = Pet ("Dog",3)
+
+
+#t is another object of Pet
+t = Pet("Cat",4)
+
+print o.name, o.age, o.count
+print t.name, t.age, t.count
+
+t.count = 4
+
+print o.name, o.age, o.count
+print t.name, t.age, t.count
