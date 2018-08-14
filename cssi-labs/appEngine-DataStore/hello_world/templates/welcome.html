@@ -11,6 +11,13 @@
     {% endif %}
     {{city[2]}}
 <br/>
+<hr/>
+{% for item in query_result %}
+  {{ item.firstname }} is {{ item.lastname }}
+
+{% endfor %}
+
+<hr/>
 {% for c in city%}
   Best city is: {{c}}<br/>
   {%endfor%}

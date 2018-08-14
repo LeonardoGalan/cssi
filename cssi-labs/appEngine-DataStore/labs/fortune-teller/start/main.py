@@ -34,7 +34,9 @@ import webapp2
 import os
 import random
 import jinja2
-
+from google.appengine.api import urlfetch
+import urllib
+import json
 
 def get_fortune():
     #add a list of fortunes to the empty fortune_list array
@@ -43,6 +45,9 @@ def get_fortune():
     random_fortune = fortune_list[random.randint(0,1)]
     return random_fortune
 
+URL = 'https://www.googleapis.com/customsearch/v1?'
+KEY = 'AIzaSyAaOACuzkzDEXWH6Boud4eY9OE_OCiFlqw'
+CX = '000931857586248951281:fsl5l86zvw4'
 
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_directory = jinja2.Environment(
@@ -57,11 +62,23 @@ class FortuneHandler(webapp2.RequestHandler):
         # make a function call that returns a random fortune.
         self.response.write(random_fortune)
     #add a post method
-    def post(self):
-        results_template = jinja_current_directory.get_template("templates/fortune-results.html")
-        user_sign = self.request.get("user_astrological_sign")
-        template_dict = {"user_sign":user_sign, "random_fortune": get_fortune()}
-        self.response.write(results_template.render(template_dict))
+class SimpleURLFetcher(webapp2.RequestHandler):
+
+    def get(self):
+        query = 'cat'
+        query_params = {'key': KEY, 'cx': CX, 'q':query}
+        result = urlfetch.fetch(URL + urllib.urlencode(query_params))
+        if result.status_code == 200:
+            self.response.write(result.status_code)
+            self.response.write(result.content)
+        else:
+            self.response.status_code = result.status_code
+
+
+        # results_template = jinja_current_directory.get_template("templates/fortune-results.html")
+        # user_sign = self.request.get("user_astrological_sign")
+        # template_dict = {"user_sign":user_sign, "random_fortune": get_fortune()}
+        # self.response.write(results_template.render(template_dict))
 
 
 
@@ -80,5 +97,5 @@ app = webapp2.WSGIApplication([
     #this line routes the main url ('/')  - also know as
     #the root route - to the Fortune Handler
     ('/', HelloHandler),
-    ('/predict', FortuneHandler),('/farewell', GoodbyeHandler) #maps '/predict' to the FortuneHandler
+    ('/simple', SimpleURLFetcher) #maps '/predict' to the FortuneHandler
 ], debug=True)
